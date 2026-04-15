@@ -1,0 +1,68 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Anna",
+      "lastName": "Novakova",
+      "email": "anna.novakova@school.cz",
+      "studyYear": 1
+    },
+    {
+      "id": 2,
+      "firstName": "Petr",
+      "lastName": "Svoboda",
+      "email": "petr.svoboda@school.cz",
+      "studyYear": 2
+    },
+    {
+      "id": 3,
+      "firstName": "Lucie",
+      "lastName": "Dvorakova",
+      "email": "lucie.dvorakova@school.cz",
+      "studyYear": 3
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "code": "WEB101",
+      "title": "Webove technologie",
+      "teacherName": "Ing. Jan Vesely",
+      "credits": 5
+    },
+    {
+      "id": 2,
+      "code": "JAVA201",
+      "title": "Java backend",
+      "teacherName": "Mgr. Petra Kralova",
+      "credits": 6
+    },
+    {
+      "id": 3,
+      "code": "DB150",
+      "title": "Databazove systemy",
+      "teacherName": "Ing. Tomas Hruby",
+      "credits": 4
+    }
+  ],
+  "enrollments": [
+    {
+      "studentId": 1,
+      "courseId": 1,
+      "enrolledAt": "2026-02-12",
+      "grade": "IN_PROGRESS"
+    },
+    {
+      "studentId": 2,
+      "courseId": 2,
+      "enrolledAt": "2026-02-13",
+      "grade": "B"
+    },
+    {
+      "studentId": 3,
+      "courseId": 3,
+      "enrolledAt": "2026-02-14",
+      "grade": "A"
+    }
+  ]
+}
