@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School API Demo - Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="page">
+    <header class="hero">
+        <p class="eyebrow">School API Demo</p>
+        <h1>Seznam studentu</h1>
+        <p class="subtitle">Jednoducha HTML/CSS/JS stranka, ktera konzumuje endpoint <strong>/api/students</strong>.</p>
+    </header>
+
+    <section class="panel">
+        <div class="panel-actions">
+            <button id="reloadBtn" type="button">Nacist studenty z API</button>
+            <span id="status" class="status">Pripraveno</span>
+        </div>
+
+        <div class="table-wrap">
+            <table aria-label="Seznam studentu">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Jmeno</th>
+                    <th>Prijmeni</th>
+                    <th>Email</th>
+                    <th>Rocnik</th>
+                </tr>
+                </thead>
+                <tbody id="studentsBody">
+                <tr>
+                    <td colspan="5" class="empty">Klikni na "Nacist studenty z API"</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

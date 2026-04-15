@@ -29,6 +29,7 @@ Cil je, aby se vyklad + live coding vesel do cca 90 minut a studenti videli:
    ```
 3. API pobezi na `http://localhost:8080`.
 4. H2 konzole pobezi na `http://localhost:8080/h2-console`.
+5. Webova stranka (HTML/CSS/JS) pobezi na `http://localhost:8080`.
 
 ## 4. Prvni test API (bez seedu)
 1. `GET /api/students`
@@ -87,7 +88,15 @@ Poznamka: endpoint importu je didakticky zamereny. Pro produkci by se resil idem
    - `GET /api/admin/json-preview`
    - `POST /api/admin/import-json`
 
-## 8. Request priklady
+## 8. Jednoducha webova stranka (HTML/CSS/JS)
+1. Stranka je ve slozce `src/main/resources/static`.
+2. Spring Boot ji obslouzi automaticky jako staticky obsah.
+3. Otevri v prohlizeci:
+   - `http://localhost:8080`
+4. Klikni na tlacitko "Nacist studenty z API".
+5. Stranka zavola `GET /api/students` a vykresli studenty do tabulky.
+
+## 9. Request priklady
 1. `POST /api/students`
    ```json
    {
@@ -121,14 +130,14 @@ Poznamka: endpoint importu je didakticky zamereny. Pro produkci by se resil idem
    }
    ```
 
-## 9. Co vysvetlit studentum (90 min plan)
+## 10. Co vysvetlit studentum (90 min plan)
 1. 0-15 min: architektura projektu, zavislosti, bootstrap aplikace.
 2. 15-35 min: entity, relace, repository a jak funguje JPA.
 3. 35-55 min: service vrstva a business pravidla.
 4. 55-75 min: controllery, validace a error handling.
 5. 75-90 min: import dat (JSON + SQL), test endpointu a diskuze o produkcnich rozdilech.
 
-## 10. Popis kazdeho vygenerovaneho souboru (co dela + proc se tak jmenuje)
+## 11. Popis kazdeho vygenerovaneho souboru (co dela + proc se tak jmenuje)
 1. `.gitignore`
    - Co dela: ignoruje build artefakty a IDE soubory.
    - Proc nazev: standardni nazev pro Git pravidla ignorovani.
@@ -240,12 +249,21 @@ Poznamka: endpoint importu je didakticky zamereny. Pro produkci by se resil idem
 37. `src/main/java/cz/schoolapi/demo/controller/AdminController.java`
    - Co dela: technicke endpointy pro preview/import seedu.
    - Proc nazev: jde o administracni (ne bezne uzivatelske) operace.
+38. `src/main/resources/static/index.html`
+   - Co dela: hlavni webova stranka s tabulkou studentu a tlacitkem pro nacitani dat.
+   - Proc nazev: `index.html` je standardni vychozi stranka webu.
+39. `src/main/resources/static/styles.css`
+   - Co dela: ciste CSS styly pro vzhled stranky.
+   - Proc nazev: `styles.css` je bezny nazev centralniho souboru se styly.
+40. `src/main/resources/static/app.js`
+   - Co dela: JavaScript logika pro volani API a vykresleni studentu.
+   - Proc nazev: `app.js` obsahuje hlavni chovani frontend aplikace.
 
-## 11. Co je idealni rozsireni po hodine
+## 12. Co je idealni rozsireni po hodine
 1. Pridat OpenAPI/Swagger dokumentaci.
 2. Pridat testy (unit + integration).
 3. Vymenit H2 za PostgreSQL a pridat Flyway migrace.
 4. Pridat autentizaci (Spring Security + JWT).
 
-## 12. Licencni poznamka
+## 13. Licencni poznamka
 Data v JSON/SQL jsou fiktivni a urcena pouze pro vyuku.
